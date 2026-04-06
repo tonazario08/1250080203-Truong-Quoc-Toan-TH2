@@ -1,22 +1,4 @@
--- ============================================================
---  CSDL_QlyDACT.sql
---  CSDL Quan ly De An Cong Ty
---  User: TruongQuocToan
---  Chay: @CSDL_QlyDACT.sql
--- ============================================================
-
--- Xoa bang cu neu ton tai (theo thu tu FK nguoc)
-DROP TABLE THANNHAN    CASCADE CONSTRAINTS PURGE;
-DROP TABLE PHANCONG    CASCADE CONSTRAINTS PURGE;
-DROP TABLE DEAN        CASCADE CONSTRAINTS PURGE;
-DROP TABLE DIADIEM_PHG CASCADE CONSTRAINTS PURGE;
-DROP TABLE NHANVIEN    CASCADE CONSTRAINTS PURGE;
-DROP TABLE PHONGBAN    CASCADE CONSTRAINTS PURGE;
-
--- ============================================================
 -- TAO BANG
--- ============================================================
-
 -- ---- Tao bang PHONGBAN (chua co FK truong phong - them sau) ----
 CREATE TABLE PHONGBAN (
     MAPHG       NUMBER(3)      CONSTRAINT phongban_maphg_pk PRIMARY KEY,
@@ -77,9 +59,7 @@ CREATE TABLE THANNHAN (
     CONSTRAINT thannhan_pk PRIMARY KEY (MANV, TENTN)
 );
 
--- ============================================================
 -- NHAP DU LIEU
--- ============================================================
 
 -- ---- PHONGBAN (chua co truong phong) ----
 INSERT INTO PHONGBAN (MAPHG, TENPHG) VALUES (1, N'Quản lý');
