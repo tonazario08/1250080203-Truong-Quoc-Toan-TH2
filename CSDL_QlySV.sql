@@ -1,19 +1,4 @@
--- ============================================================
---  CSDL_QlySV.sql
---  CSDL Quan ly Diem Sinh Vien
---  User: TruongQuocToan
---  Chay: @CSDL_QlySV.sql
--- ============================================================
-
--- Xoa bang cu neu ton tai (theo thu tu FK nguoc)
-DROP TABLE KETQUA  CASCADE CONSTRAINTS PURGE;
-DROP TABLE DMSV    CASCADE CONSTRAINTS PURGE;
-DROP TABLE DMMH    CASCADE CONSTRAINTS PURGE;
-DROP TABLE DMKHOA  CASCADE CONSTRAINTS PURGE;
-
--- ============================================================
 -- TAO BANG
--- ============================================================
 
 -- ---- Tao bang DMKHOA ----
 CREATE TABLE DMKHOA (
@@ -48,9 +33,7 @@ CREATE TABLE KETQUA (
     CONSTRAINT ketqua_pk PRIMARY KEY (MASV, MAMH)
 );
 
--- ============================================================
 -- NHAP DU LIEU
--- ============================================================
 
 -- ---- DMKHOA ----
 INSERT INTO DMKHOA VALUES ('TI', N'Công nghệ thông tin');
