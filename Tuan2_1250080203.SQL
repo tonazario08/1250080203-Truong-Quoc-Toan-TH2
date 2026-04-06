@@ -7,7 +7,11 @@ FROM   employees
 WHERE  salary > 12000;
 
 -- CAU 2: Ten va luong nhan vien co luong < 5000$ hoac > 12000$
-
+SELECT last_name,
+       salary
+FROM   employees
+WHERE  salary < 5000
+   OR  salary > 12000;
 
 -- CAU 3: Ten, job_id, hire_date tu 20/02/1998 den 01/05/1998 sap xep tang dan theo ngay thue
 SELECT last_name,
